@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cajuu • Início</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      color: #e6e6e6;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 30px;
+      background: rgba(15, 15, 15, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 122, 0, 0.2);
+    }
+
+    .nav-logo {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #ff8c1a;
+      letter-spacing: 1px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-menu li { position: relative; }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #e6e6e6;
+      font-weight: 500;
+      transition: color 0.25s ease;
+    }
+
+    .nav-menu a:hover { color: #ff8c1a; }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 140%;
+      left: 0;
+      background: linear-gradient(160deg, #1a1a1a, #262626);
+      border-radius: 14px;
+      padding: 10px 0;
+      min-width: 160px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.25s ease;
+      border: 1px solid rgba(255,122,0,0.2);
+    }
+
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu li { padding: 10px 18px; }
+
+    .dropdown-menu li a { color: #d9d9d9; }
+
+    .dropdown-menu li a:hover { color: #ff8c1a; }
+
+    header {
+      padding: 100px 20px 80px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: #ff8c1a;
+      margin-bottom: 18px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #cfcfcf;
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .features {
+      max-width: 1100px;
+      margin: 0 auto 90px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .feature {
+      background: linear-gradient(160deg, #1a1a1a, #262626);
+      border-radius: 22px;
+      padding: 34px 28px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,122,0,0.18);
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover { transform: translateY(-10px); }
+
+    .feature h3 {
+      font-size: 1.4rem;
+      color: #ff8c1a;
+      margin-bottom: 14px;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      color: #d6d6d6;
+      line-height: 1.6;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 80px 20px 100px;
+      background: linear-gradient(135deg, #ff7a00, #ff9a1f);
+      color: #0f0f0f;
+    }
+
+    .cta h2 {
+      font-size: 2.4rem;
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+
+    .cta p {
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 16px 32px;
+      background: #0f0f0f;
+      color: #ff8c1a;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 999px;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.4);
+      transition: transform 0.25s ease;
+    }
+
+    .cta a:hover { transform: scale(1.06); }
+
+    footer {
+      padding: 30px 15px;
+      text-align: center;
+      color: #8c8c8c;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    footer span { color: #ff8c1a; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">cajuu</div>
+    <ul class="nav-menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="support.html">Suporte</a></li>
+      <li class="dropdown">
+        <a href="#">Produtos</a>
+        <ul class="dropdown-menu">
+          <li><a href="download.html">cajuu</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>O controle do mercado na sua mão</h1>
+    <p>O cajuu é o jeito mais rápido, simples e inteligente de acompanhar moedas e ações em tempo real, sem complicação e sem burocracia.</p>
+  </header>
+
+  <section class="features">
+    <div class="feature">
+      <h3>Melhor analisador de moedas e ações</h3>
+      <p>Acompanhe cotações, variações e tendências de forma rápida e fácil de usar, ideal para quem quer praticidade sem perder precisão.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Anotações personalizadas</h3>
+      <p>Crie anotações sobre as ações e moedas desejadas, registre estratégias, metas e decisões direto no aplicativo.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Atualizações em tempo real</h3>
+      <p>Receba informações atualizadas de suas moedas e ações favoritas em tempo real para não perder nenhuma oportunidade.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Sem precisar de login</h3>
+      <p>Use todas as funcionalidades sem criar conta, sem cadastro e sem dor de cabeça. Abriu, usou, pronto.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Simples, rápido e direto ao ponto</h2>
+    <p>Comece agora a analisar o mercado sem login e sem burocracia.</p>
+    <a href="download.html">Baixar o cajuu</a>
+  </section>
+
+  <footer>
+    <p>© 2026 <span>cajuu</span>. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
