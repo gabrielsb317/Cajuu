@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cajuu • Download</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", Roboto, Arial, sans-serif; }
+
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      color: #e6e6e6;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 30px;
+      background: rgba(15, 15, 15, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 122, 0, 0.2);
+    }
+
+    .nav-logo { font-size: 1.6rem; font-weight: 800; color: #ff8c1a; letter-spacing: 1px; }
+
+    .nav-menu { list-style: none; display: flex; gap: 28px; }
+
+    .nav-menu li { position: relative; }
+
+    .nav-menu a { text-decoration: none; color: #e6e6e6; font-weight: 500; transition: color 0.25s ease; }
+
+    .nav-menu a:hover { color: #ff8c1a; }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 140%;
+      left: 0;
+      background: linear-gradient(160deg, #1a1a1a, #262626);
+      border-radius: 14px;
+      padding: 10px 0;
+      min-width: 160px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.25s ease;
+      border: 1px solid rgba(255,122,0,0.2);
+    }
+
+    .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+
+    .dropdown-menu li { padding: 10px 18px; }
+    .dropdown-menu li a { color: #d9d9d9; }
+    .dropdown-menu li a:hover { color: #ff8c1a; }
+
+    header {
+      text-align: center;
+      padding: 110px 20px 90px;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: #ff8c1a;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #cfcfcf;
+      max-width: 760px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .download-section {
+      max-width: 1100px;
+      margin: 0 auto 100px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 35px;
+    }
+
+    .download-card {
+      background: linear-gradient(160deg, #1a1a1a, #262626);
+      border-radius: 24px;
+      padding: 40px 30px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.65);
+      border: 1px solid rgba(255,122,0,0.2);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .download-card:hover { transform: translateY(-12px); }
+
+    .download-card h3 {
+      font-size: 1.5rem;
+      color: #ff8c1a;
+      margin-bottom: 16px;
+    }
+
+    .download-card p {
+      font-size: 1rem;
+      color: #d6d6d6;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .download-card a {
+      display: inline-block;
+      padding: 16px 34px;
+      background: linear-gradient(135deg, #ff7a00, #ff9a1f);
+      color: #0f0f0f;
+      font-weight: 800;
+      text-decoration: none;
+      border-radius: 999px;
+      box-shadow: 0 16px 35px rgba(255,122,0,0.45);
+      transition: transform 0.25s ease;
+    }
+
+    .download-card a:hover { transform: scale(1.08); }
+
+    .badge {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: rgba(255,122,0,0.15);
+      color: #ff9a1f;
+    }
+
+    footer {
+      padding: 30px 15px;
+      text-align: center;
+      color: #8c8c8c;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    footer span { color: #ff8c1a; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">cajuu</div>
+    <ul class="nav-menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="support.html">Suporte</a></li>
+      <li class="dropdown">
+        <a href="#">Produtos</a>
+        <ul class="dropdown-menu">
+          <li><a href="download.html">cajuu</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Download do cajuu</h1>
+    <p>O analisador de moedas e ações feito para quem quer agilidade, clareza e performance. Um único app, várias vantagens reais.</p>
+  </header>
+
+  <section class="download-section" style="grid-template-columns: 1fr; max-width: 900px;">
+
+    <div class="download-card">
+      <h3>Instalador simples e fluido</h3>
+      <p>O cajuu possui um instalador leve e otimizado, sem etapas desnecessárias. Em poucos segundos o aplicativo já está pronto para uso.</p>
+      <div class="badge">Instalação rápida</div>
+    </div>
+
+    <div class="download-card">
+      <h3>Mais procurado por analistas de ações</h3>
+      <p>Utilizado por quem acompanha o mercado diariamente e precisa de dados claros, organizados e confiáveis para análise.</p>
+      <div class="badge">Alta confiabilidade</div>
+    </div>
+
+    <div class="download-card">
+      <h3>Uso imediato</h3>
+      <p>Não é necessário criar conta ou realizar login. Basta instalar e começar a acompanhar moedas e ações em tempo real.</p>
+      <div class="badge">Sem cadastro</div>
+    </div>
+
+    <div class="download-card" style="margin-top:50px; background: linear-gradient(135deg, #ff7a00, #ff9a1f); color:#0f0f0f; padding:70px 45px; box-shadow: 0 45px 90px rgba(255,122,0,0.65);">
+      <h3 style="color:#0f0f0f; font-size:2.4rem;">BAIXAR O CAJUU</h3>
+      <p style="color:#1a1a1a; font-size:1.15rem; max-width:650px; margin:22px auto;">Faça o download do aplicativo oficial e tenha acesso imediato ao analisador de moedas e ações mais simples, rápido e eficiente.</p>
+
+      <a href="cajuu_installer.exe" download style="background:#0f0f0f; color:#ff8c1a; font-size:1.15rem; padding:22px 52px;">Baixar agora</a>
+
+      <div class="badge" style="margin-top:22px; background: rgba(0,0,0,0.18); color:#1a1a1a;">Windows • Arquivo oficial</div>
+      <p style="margin-top:14px; font-size:0.85rem; color:#1a1a1a;">Sem login • Gratuito • Download imediato</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 <span>cajuu</span>. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
