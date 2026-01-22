@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cajuu • Sobre</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", Roboto, Arial, sans-serif; }
+
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      color: #e6e6e6;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 30px;
+      background: rgba(15, 15, 15, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 122, 0, 0.2);
+    }
+
+    .nav-logo { font-size: 1.6rem; font-weight: 800; color: #ff8c1a; letter-spacing: 1px; }
+    .nav-menu { list-style: none; display: flex; gap: 28px; }
+    .nav-menu li { position: relative; }
+    .nav-menu a { text-decoration: none; color: #e6e6e6; font-weight: 500; transition: color 0.25s ease; }
+    .nav-menu a:hover { color: #ff8c1a; }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 140%;
+      left: 0;
+      background: linear-gradient(160deg, #1a1a1a, #262626);
+      border-radius: 14px;
+      padding: 10px 0;
+      min-width: 160px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.25s ease;
+      border: 1px solid rgba(255,122,0,0.2);
+    }
+
+    .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-menu li { padding: 10px 18px; }
+    .dropdown-menu li a { color: #d9d9d9; }
+    .dropdown-menu li a:hover { color: #ff8c1a; }
+
+    header {
+      padding: 110px 20px 70px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #ff8c1a;
+      margin-bottom: 18px;
+    }
+
+    header p {
+      font-size: 1.15rem;
+      color: #cfcfcf;
+      line-height: 1.7;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 0 auto 100px;
+      padding: 0 20px;
+      display: grid;
+      gap: 40px;
+    }
+
+    .block {
+      background: linear-gradient(160deg, #1a1a1a, #262626);
+      border-radius: 22px;
+      padding: 42px 38px;
+      box-shadow: 0 25px 55px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,122,0,0.18);
+    }
+
+    .block h2 {
+      font-size: 1.8rem;
+      color: #ff8c1a;
+      margin-bottom: 18px;
+    }
+
+    .block p {
+      font-size: 1.05rem;
+      color: #d6d6d6;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 30px 15px;
+      text-align: center;
+      color: #8c8c8c;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    footer span { color: #ff8c1a; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">cajuu</div>
+    <ul class="nav-menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="support.html">Suporte</a></li>
+      <li class="dropdown">
+        <a href="#">Produtos</a>
+        <ul class="dropdown-menu">
+          <li><a href="download.html">cajuu</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Quem sou</h1>
+    <p>Não é sobre criar mais um aplicativo. É sobre simplificar algo que ficou complexo demais.</p>
+  </header>
+
+  <section class="content">
+
+    <div class="block">
+      <h2>Minha visão</h2>
+      <p>Sou um desenvolvedor destemido e aventureiro, cansado de um mundo digital inflado, confuso e cheio de informação desnecessária. Tudo hoje parece exigir cadastro, confirmação, etapas extras e tempo que ninguém tem. O cajuu nasce como resposta direta a isso.</p>
+    </div>
+
+    <div class="block">
+      <h2>Por que o cajuu existe</h2>
+      <p>Ao acompanhar o mercado, percebi que muitas ferramentas entregam mais ruído do que valor. Interfaces poluídas, excesso de dados irrelevantes e processos complicados afastam quem só quer analisar, decidir e seguir em frente. O cajuu foi criado para ser direto, rápido e funcional, sem distrações.</p>
+    </div>
+
+    <div class="block">
+      <h2>Como eu penso software</h2>
+      <p>Acredito que um bom aplicativo não deve ensinar o usuário a usá-lo. Ele simplesmente funciona. Cada detalhe do cajuu foi pensado para reduzir atrito, eliminar burocracia e entregar apenas o que realmente importa. Sem login, sem coleta desnecessária de dados e sem promessas vazias.</p>
+    </div>
+
+    <div class="block">
+      <h2>O que vem pela frente</h2>
+      <p>O cajuu é só o começo. A ideia é evoluir constantemente, ouvindo quem usa e mantendo o foco em simplicidade, performance e transparência. Se algo não agrega valor real, não entra. Esse é o compromisso.</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 <span>cajuu</span>. Criado com foco em simplicidade e clareza.</p>
+  </footer>
+
+</body>
+</html>
